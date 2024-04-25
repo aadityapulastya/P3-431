@@ -2,15 +2,15 @@
 
 # Hoops CLI
 
-  This repository contains the necessary files to run HoopsCLI. It includes CSV files, a SQL file, and a Python script.
+  This repository contains the necessary files to run the HoopsCLI. It includes CSV files, a SQL file, and a Python script.
 
 ## Installation
 
 To run the program, follow these steps:
 
-1. **Install PostgreSQL**: If you haven't already, install PostgreSQL onto your machine. You can download it from the [official PostgreSQL website](https://www.postgresql.org/download/).
+1. **Install PostgreSQL**
 
-2. **Set Up Python Environment**: Make sure you have Python installed on your machine. Additionally, install the necessary packages by running:
+2. **Set Up Python Environment**: Make sure you have psycopg2 installed. If not, execute this command in your terminal. This will install the program into your Python enviornment. 
    
    ```bash
    pip install psycopg2
@@ -18,24 +18,23 @@ To run the program, follow these steps:
 
 ## Usage
 
-1. **Create Database**: Import the provided `.sql` file into your PostgreSQL database management tool (e.g., pgAdmin, psql) to create a new database with the required schema. You can do this by running the following command in your terminal:
-
+1. **Create Database**: Import `NBA.sql` into your Postgres Server by executing this command in the terminal:
    ```bash
-   psql -U your_username -d your_database_name -f NBA.sql
+   psql -U username -d database -f NBA.sql
    ```
 
-   Replace `your_username` with your PostgreSQL username and `your_database_name` with the name of the database you want to create.
+   Replace `username` with your PostgreSQL username and `database` with the name of the database you want to create.
 
-2. **Run the Python Script**: Execute the provided `.py` file to populate the database with data from the CSV files. You can run the script using:
+2. **Run the Python Script**: Execute `NBA.py` to connect with the DB and create a CLI interface for the user:
 
    ```bash
    python NBA.py
    ```
 ## Files & Folders
 
-- `csv`: Contains the raw data.
-- `NBA.sql`: SQL file defining the database schema.
-- `NBA.py`: Python script to import data from CSV files into the PostgreSQL database.
+- `csv`: Contains raw CSVs.
+- `NBA.sql`: SQL file defining the database schema and populating the data.
+- `NBA.py`: Python script to create CLI to interact with DB.
 
 ## Contributors
 
