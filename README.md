@@ -34,7 +34,7 @@ To run the program, follow these steps:
 ## Files & Folders
 
 - `csv`: Contains the raw data.
-- `schema.sql`: SQL file defining the database schema.
+- `NBA.sql`: SQL file defining the database schema.
 - `NBA.py`: Python script to import data from CSV files into the PostgreSQL database.
 
 ## Contributors
